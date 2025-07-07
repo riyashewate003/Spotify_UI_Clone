@@ -1,0 +1,347 @@
+
+body{
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+
+.main {
+    display: flex;
+    margin-left: 340px; /* Same as sidebar width */
+    padding: 0.7px;
+    overflow: hidden;
+    height: calc(100vh - 72px); /* Adjust height due to fixed music player */
+}
+
+.sidebar{
+    background-color: #000;
+    width: 340px;
+    height: calc(100vh - 72px); /* ✅ Subtract music player height */
+    border-radius: 1rem;
+    position: fixed;
+    padding-bottom: 80px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.main-content {
+    background-color: #151515;
+    flex: 1;
+    border-radius: 1rem;
+    overflow-y: auto;
+    height: calc(100vh - 72px);
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 0 20px 0 20px;
+    margin-left: 1rem;
+}
+
+.music-player{
+    background-color: #000;
+    position: fixed;
+    bottom: 0; /* ✅ Push right of sidebar */
+    width: 100%; /* ✅ Prevent overlap */
+    height: 72px;
+    z-index: 100; /* Optional: Make sure it's on top */
+    padding: 8px;
+}
+
+.nav{
+    background-color: #151515;
+    padding: 0.2rem 0.60rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100px;
+}
+
+.nav-option{
+    line-height: 1.6rem;
+    opacity: 0.5;
+    padding: 0.5rem 0;
+}
+
+.nav-option i{
+    font-size: 0.97rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.nav-option a{
+    font-size: 0.90rem;
+}
+
+.nav-option:hover{
+    opacity: 1;
+    transition: 0.9;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.library {
+    padding: 0.5rem 0.75rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    background-color: #151515;
+    height: calc(100vh - 100px - 72px - 38px); /* ✅ Nav height + player height */
+    overflow-y: auto;
+    margin-top: 0.50rem;
+}
+
+.lib-options img{
+    padding-right: 0.8rem;
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.75rem
+}
+
+.icons{
+    font-size: 1rem;
+    display: flex;
+}
+
+.icons i{
+    opacity: 0.5;
+}
+
+.icons i:hover{
+    opacity: 1;
+    transition: 0.1s;
+    
+}
+
+.lib-options img{
+    height: 1rem;
+}
+
+.box1{
+    background-color: #1f1f1f;
+    border-radius: 0.75rem;
+    padding: 13px 20px;
+    height: 7rem;
+    margin: 1rem 0px 1rem;
+}
+
+.badge{
+    font-weight: 700;
+    font-size: 0.80rem;
+    background-color: white;
+    border-radius: 6rem;
+    border: none;
+    padding: 0.55rem 0.7rem;
+    width: fit-content;
+    margin-top: 0.5rem;
+}
+
+.box-p1{
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.box-p2{
+    font-size: 0.65rem;
+    font-weight: 500;
+    opacity: 0.98;
+}
+
+.box2{
+    background-color: #1f1f1f;
+    border-radius: 0.75rem;
+    padding: 13px 20px;
+    height: 8rem;
+    margin: 8px 0px 8px 0px;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.85rem;
+    background-color: #151515; /* ✅ Required so it doesn’t blend */
+    z-index: 10; /* ✅ Ensure it's above other content */
+    align-items: center;
+    margin-bottom: 0.85rem;
+    height: 55px;
+}
+
+.sticky-nav-buttons button, i{
+    margin-right: 0.6rem;
+}
+
+.sticky-nav-icons img{
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+.user{
+    margin-right: 1rem;
+}
+
+.badge:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+@media (max-width: 1000px){
+    .hide{
+        display: none;
+    }
+}
+
+.card{
+    background-color: #1f1f1f;
+    width: 150px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 1rem;
+}
+
+h2{
+    margin: 20px 5px;
+    font-size: 1.3rem;
+}
+
+.card-img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards-container div{
+    margin-right: 18px;
+}
+
+.card-info{
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.card-title{
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.footer{
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.line{
+    width: 90%;
+    height: 30%;
+    border-top: 1px solid white;
+    opacity: 0.2;
+}
+
+.music-player{
+    display: flex;
+}
+
+.album{
+    width: 25%;
+    padding-left: 0.5rem;
+}
+
+.player{
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls{
+    width: 25%;
+}
+
+.player-control-icon-3{
+    height: 0.8rem;
+    width: 0.8rem;
+    margin-right: 1.6rem;
+    margin-top: 0.60rem;
+    opacity: 0.7;
+}
+
+.player-control-icon-2{
+    height: 1rem;
+    width: 1rem;
+    margin-right: 1.6rem;
+    margin-top: 0.60rem;
+    opacity: 0.7;
+}
+
+.player-control-icon-1{
+    width: 1.9rem;
+    height: 1.9rem;
+    margin-right: 1.6rem;
+    margin-top: 0.60rem;
+}
+
+.player-control-icons:hover{
+    opacity: 1.5;
+    transition-duration: 0.5s;
+}
+
+.player-control{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.song-progress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar{
+    width: 60%;
+    appearance: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 90px;
+    height: 0.25rem;
+    margin-top: 0.8rem;
+}
+
+.progress-bar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 12px;
+    width: 12px;
+    background-color: #1bd760;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-top: -4px; /* ✅ aligns thumb with track vertically */
+    position: relative;
+    z-index: 2;
+}
+
+.time{
+    font-size: 0.7rem;
+    margin-top: 0.8rem;
+}
